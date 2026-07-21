@@ -39,7 +39,7 @@ RUN apt-get install -y zulu21=$JDK21_VERSION zulu21-jre=$JDK21_VERSION zulu21-jr
         zulu21-jdk-headless=$JDK21_VERSION zulu21-doc=$JDK21_VERSION zulu21-ca=$JDK21_VERSION zulu21-ca-jre=$JDK21_VERSION zulu21-ca-jre-headless=$JDK21_VERSION \
         zulu21-ca-jdk=$JDK21_VERSION zulu21-ca-jdk-headless=$JDK21_VERSION zulu21-ca-doc=$JDK21_VERSION
 
-RUN update-java-alternatives -s zulu17-ca-amd64
+RUN update-java-alternatives -s zulu21-ca-amd64
 
 # This will install the cert store provided by ubuntu openjdk in case it's needed
 # it's installed under /etc/ssl/certs/java/cacerts 

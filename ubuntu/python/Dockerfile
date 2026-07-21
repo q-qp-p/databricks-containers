@@ -1,6 +1,6 @@
 FROM databricksruntime/minimal:experimental
 
-ARG package_index_url="https://pypi-proxy.cloud.databricks.com/simple"
+ARG package_index_url="https://pypi.org/simple"
 ARG python_version="3.12"
 ARG pip_version="25.0.1"
 ARG setuptools_version="78.1.1"
