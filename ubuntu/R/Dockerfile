@@ -13,7 +13,7 @@ RUN apt-get update \
 # We are using the more secure long form of pgp key ID of marutter@gmail.com
 # based on these instructions (avoiding firewall issue for some users):
 # https://cran.rstudio.com/bin/linux/ubuntu/#secure-apt
-ARG r_version="4.4.2-1.2404.0"
+ARG r_version="4.5.1-1.2404.0"
 RUN apt-get update \
   && apt-get install --yes software-properties-common apt-transport-https \
   && gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \

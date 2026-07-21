@@ -27,17 +27,17 @@ RUN curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb \
     && apt-get install ./zulu-repo_1.0.0-3_all.deb \
     && rm zulu-repo_1.0.0-3_all.deb
 
-ARG JDK8_VERSION="8.0.432-1"
-ARG JDK17_VERSION="17.0.16-1"
+ARG JDK17_VERSION="17.0.19-3"
+ARG JDK21_VERSION="21.0.11-3"
 
 RUN apt-get update
-RUN apt-get install -y zulu8=$JDK8_VERSION zulu8-jre=$JDK8_VERSION zulu8-jre-headless=$JDK8_VERSION zulu8-jdk=$JDK8_VERSION \
-        zulu8-jdk-headless=$JDK8_VERSION zulu8-doc=$JDK8_VERSION zulu8-ca=$JDK8_VERSION zulu8-ca-jre=$JDK8_VERSION zulu8-ca-jre-headless=$JDK8_VERSION \
-        zulu8-ca-jdk=$JDK8_VERSION zulu8-ca-jdk-headless=$JDK8_VERSION zulu8-ca-doc=$JDK8_VERSION
-
 RUN apt-get install -y zulu17=$JDK17_VERSION zulu17-jre=$JDK17_VERSION zulu17-jre-headless=$JDK17_VERSION zulu17-jdk=$JDK17_VERSION \
         zulu17-jdk-headless=$JDK17_VERSION zulu17-doc=$JDK17_VERSION zulu17-ca=$JDK17_VERSION zulu17-ca-jre=$JDK17_VERSION zulu17-ca-jre-headless=$JDK17_VERSION \
         zulu17-ca-jdk=$JDK17_VERSION zulu17-ca-jdk-headless=$JDK17_VERSION zulu17-ca-doc=$JDK17_VERSION
+
+RUN apt-get install -y zulu21=$JDK21_VERSION zulu21-jre=$JDK21_VERSION zulu21-jre-headless=$JDK21_VERSION zulu21-jdk=$JDK21_VERSION \
+        zulu21-jdk-headless=$JDK21_VERSION zulu21-doc=$JDK21_VERSION zulu21-ca=$JDK21_VERSION zulu21-ca-jre=$JDK21_VERSION zulu21-ca-jre-headless=$JDK21_VERSION \
+        zulu21-ca-jdk=$JDK21_VERSION zulu21-ca-jdk-headless=$JDK21_VERSION zulu21-ca-doc=$JDK21_VERSION
 
 RUN update-java-alternatives -s zulu17-ca-amd64
 
